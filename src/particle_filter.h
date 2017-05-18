@@ -30,11 +30,6 @@ class ParticleFilter {
 	// Number of particles to draw
 	int num_particles;
 
-  // TODO(Olala): find the right uncertainty
-  // Motion uncertainty {sigma_v, sigma_yaw}
-  double sigma_motion[2] = {0.3, 0.01};
-
-
 	// Flag, if filter is initialized
 	bool is_initialized;
 
@@ -48,7 +43,7 @@ public:
 
 	// Constructor
 	// @param M Number of particles
-	ParticleFilter() : num_particles(0), is_initialized(false) {}
+	ParticleFilter() : num_particles(200), is_initialized(false) {}
 
 	// Destructor
 	~ParticleFilter() {}
