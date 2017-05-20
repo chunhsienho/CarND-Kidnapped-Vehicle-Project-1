@@ -161,8 +161,7 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
     double sig_x = std_landmark[0];
     double sig_y = std_landmark[1];
     double weight = 1.0f;
-    // double norm = 1.0f / ( 2 * M_PI * sig_x * sig_y);  // normalizer
-    double norm = 1.0f;
+    double norm = 1.0f / ( 2 * M_PI * sig_x * sig_y);  // normalizer
 
     double sig_x2 = sig_x * sig_x;
     double sig_y2 = sig_y * sig_y;
